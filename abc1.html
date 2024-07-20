@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <title>Resource Sharing</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .glow {
+            animation: glow-animation 2s infinite alternate;
+        }
+
+        @keyframes glow-animation {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            }
+            100% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+            }
+        }
+
+        .form-container {
+            margin-top: 50px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .input-group input[type="text"],
+        .input-group input[type="email"],
+        .input-group input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .submit-btn {
+            background-color: #ff0;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #ffcc00;
+        }
+
+        .error {
+            color: #ff5050;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .o {
+  position: relative;
+  left: -405px;
+  background-color: green;
+  top: -284px;
+  height: 50px;
+}
+.z {
+  position: relative;
+  left: 1063px;
+  background-color: green;
+  top: -284px;
+  height: 40px;
+  width: 30px;
+  z-index: 10;
+}
+    </style>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+      
+        function goToHomePage() {
+            window.location.href = 'homepage.html';
+        }
+      
+        
+      </script>
+</head>
+<body>
+    <header>
+        <button class="z" onclick="goBack()"><</button>
+                        <button  class="o" onclick="goToHomePage()">Go to starting page</button>
+            
+              
+    </header>
+    <div id="output"></div>
+    
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
+    <script type="text/babel">
+        const ResourceSharingForm = () => {
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                const name = e.target.name.value;
+                const email = e.target.email.value;
+                const file = e.target.file.files[0];
+                
+                
+                let isValid = true;
+                const errors = {};
+
+              
+                if (name.length < 3) {
+                    errors.name = "Name must be at least 3 characters long";
+                    isValid = false;
+                }
+
+               
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    errors.email = "Please enter a valid email address";
+                    isValid = false;
+                }
+
+               
+                if (file) {
+                    const fileType = file.name.split('.').pop();
+                    if (!(fileType === 'pdf' || fileType === 'doc' || fileType === 'docx')) {
+                        errors.file = "Please upload a PDF, DOC, or DOCX file";
+                        isValid = false;
+                    }
+                } else {
+                    errors.file = "Please choose a file to upload";
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    alert("Form submitted successfully!");
+                } else {
+                    setErrors(errors);
+                }
+            };
+
+            const [errors, setErrors] = React.useState({});
+
+            return (
+                <div className="container form-container">
+                    <h1 className="glow">Contribute to Solar Eclipse Resources</h1>
+                    <form onSubmit={handleSubmit}>
+                        <div className="input-group">
+                            <label htmlFor="name">Your Name:</label>
+                            <input type="text" id="name" name="name" required />
+                            {errors.name && <div className="error">{errors.name}</div>}
+                        </div>
+                        <div className="input-group">
+                            <label htmlFor="email">Your Email:</label>
+                            <input type="email" id="email" name="email" required />
+                            {errors.email && <div className="error">{errors.email}</div>}
+                        </div>
+                        <div className="input-group">
+                            <label htmlFor="file">Upload Article or Image:</label>
+                            <input type="file" id="file" name="file" required />
+                            {errors.file && <div className="error">{errors.file}</div>}
+                        </div>
+                        <button type="submit" className="submit-btn">Submit</button>
+                    </form>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<ResourceSharingForm />, document.getElementById('output'));
+    </script>
+</body>
+</html>

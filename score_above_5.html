@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Above 5</title>
+
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('cup.gif');
+           
+            background-repeat: no-repeat;
+            background-size: 400px 400px;
+            background-position: 360px 100px;
+  background-color: #afff00;
+        
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            color:black;
+            text-align: center;
+            position:relative;
+            left:200px;
+           top:-29px;
+           
+           
+        }
+
+        .score {
+            color: black;
+            font-size: 36px;
+            margin-top: 20px;
+            text-align: center;
+            position:relative;
+            left:200px;
+            top:-41px;
+        }
+        .o {
+  position: relative;
+  left: -693px;
+  background-color: green;
+  top: -288px;
+  height: 53px;
+}
+.z {
+  position: relative;
+  left: -737px;
+  background-color: green;
+  top: 197px;
+  height: 40px;
+  width: 30px;
+  z-index: 10;
+}
+
+    </style>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+      
+        function goToHomePage() {
+            window.location.href = 'homepage.html';
+        }
+      
+        
+      </script>
+</head>
+<body>
+    <button class="z" onclick="goBack()"><</button>
+            <button  class="o" onclick="goToHomePage()">Go to starting page</button>
+
+
+    <h1>Congratulations!</h1>
+    <p class="score">Your Score: <span id="score"></span>/10</p>
+
+    <script>
+      
+        const urlParams = new URLSearchParams(window.location.search);
+        const score = urlParams.get('score');
+        
+        
+        document.getElementById('score').textContent = score;
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <title>Solar Eclipse Events</title>
+
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Header content here -->
+    </header>
+    <div id="output"></div>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+   
+    <script type="text/babel">
+        const Additional1 = () => {
+            return (
+                <div>Component 1</div>
+            );
+        };
+
+        const Additional2 = () => {
+            return (
+                <div>Component 2</div>
+            );
+        };
+
+        const handleEvent1 = () => {
+            alert('Button 1 clicked!');
+        };
+
+        const handleEvent2 = () => {
+            alert('Button 2 clicked!');
+        };
+
+        ReactDOM.render(
+            <>
+                <Additional1 />
+                <Additional2 />
+                {handleEvent1()}
+            </>,
+            document.getElementById('output')
+        );
+    </script>
+</body>
+</html>

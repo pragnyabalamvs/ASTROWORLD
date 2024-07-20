@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Reviews - Solar System Learning</title>
+   
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <style>
+   .o {
+  position: relative;
+  left: -33px;
+  background-color: green;
+  top: 0px;
+  height: 50px;
+}
+.z {
+  position: relative;
+  left: 4px;
+  background-color: green;
+  top: 393px;
+  height: 40px;
+  width: 30px;
+  z-index: 10;
+}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #5c5cb1;
+        }
+        .review-box {
+            background-color: #f9f9f9; 
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            color: #333;
+        }
+        .review-box::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            width: calc(100% + 10px);
+            height: calc(100% + 10px);
+            background: linear-gradient(45deg, #ffafaf, #ffd5d5, #ffafaf);
+            border-radius: 10px;
+            z-index: -1;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+        .review-heading {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-left: 674px;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.7);
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background: linear-gradient(45deg, #ffafaf, #ffd5d5, #ffafaf);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        .review {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .review-author {
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+      
+        function goToHomePage() {
+            window.location.href = 'homepage.html';
+        }
+      
+        
+      </script>
+</head>
+<body>
+    <header>
+        <button class="z" onclick="goBack()"><</button>
+                <button  class="o" onclick="goToHomePage()">Go to starting page</button>
+    
+      </header>
+    
+    
+    <h1 class="review-heading">Reviews</h1>
+
+    <div class="review-box">
+        <p class="review">"This website is fantastic! I learned about the formation of the solar system and how eclipses occur. The interactive simulations really helped me understand complex astronomical concepts."</p>
+        <p class="review-author">- John Doe</p>
+    </div>
+
+    <div class="review-box">
+        <p class="review">"I never knew the intricacies of the solar system until I visited this website. The detailed explanations about the different planets and their moons were enlightening. I now have a better understanding of solar and lunar eclipses."</p>
+        <p class="review-author">- Jane Smith</p>
+    </div>
+
+    <div class="review-box">
+        <p class="review">"As a student, I found this website incredibly helpful for my science project. The information provided about the solar system and eclipses was comprehensive and easy to comprehend. I particularly enjoyed the interactive quizzes."</p>
+        <p class="review-author">- David Johnson</p>
+    </div>
+
+    <div class="review-box">
+        <p class="review">"I've always been fascinated by space, and this website fueled my curiosity even more. The detailed explanations and visuals about the solar system and eclipses were captivating. I feel like I've gained a deeper understanding of the universe."</p>
+        <p class="review-author">- Sarah Lee</p>
+    </div>
+</body>
+</html>

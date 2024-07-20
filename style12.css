@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .welcome-back h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  ul li strong {
+    font-weight: bold;
+  }
+  

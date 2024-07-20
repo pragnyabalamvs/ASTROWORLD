@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System and Eclipses Quiz</title>
+    
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <style>
+        .o {
+  position: relative;
+  left: -29px;
+  background-color: green;
+  top: -255px;
+  height: 50px;
+}
+.z {
+  position: relative;
+
+  left: 10px;
+
+  background-color: green;
+
+  top: 53px;
+
+  height: 40px;
+
+  width: 30px;
+
+  z-index: 10;
+
+}
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            background: #060c21;
+            justify-content: center;
+            font-family: sans-serif;
+        }
+
+        option {
+            color: black;
+            background-color: white;
+        }
+
+        option:hover {
+            color: white;
+            background-color: blue;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #15b6b6;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .question p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .options label input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1db020;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #1db020;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #fff;
+            font-size: 20px;
+            text-align: center;
+            display: none;
+        }
+        .o {
+  position: relative;
+  left: 8px;
+  background-color: green;
+  top: -1335px;
+  height: 50px;
+}
+.z {
+  position: relative;
+  left: -58px;
+  background-color: green;
+  top: -1030px;
+  height: 40px;
+  width: 30px;
+  z-index: 10;
+}
+    </style>
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+    
+            function goToHomePage() {
+                window.location.href = 'homepage.html';
+            }
+        </script>
+</head>
+<body>
+    <header>
+    <button class="z" onclick="goBack()"><</button>
+    <button  class="o" onclick="goToHomePage()">Go to starting page</button>
+</header>
+
+
+<div class="container">
+   
+    <h1>Solar System and Eclipses Quiz</h1>
+    <div class="question">
+        <p>1. Which planet is known as the Red Planet?</p>
+        <div class="options">
+            <label><input type="radio" name="question1" value="a">A. Venus</label>
+            <label><input type="radio" name="question1" value="b">B. Mars</label>
+            <label><input type="radio" name="question1" value="c">C. Jupiter</label>
+            <label><input type="radio" name="question1" value="d">D. Saturn</label>
+        </div>
+    </div>
+    
+   
+    <div class="question">
+        <p>2. What is the closest planet to the Sun?</p>
+        <div class="options">
+            <label><input type="radio" name="question2" value="a">A. Venus</label>
+            <label><input type="radio" name="question2" value="b">B. Mercury</label>
+            <label><input type="radio" name="question2" value="c">C. Mars</label>
+            <label><input type="radio" name="question2" value="d">D. Earth</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>3. What is the largest planet in our solar system?</p>
+        <div class="options">
+            <label><input type="radio" name="question3" value="a">A. Venus</label>
+            <label><input type="radio" name="question3" value="b">B. Saturn</label>
+            <label><input type="radio" name="question3" value="c">C. Jupiter</label>
+            <label><input type="radio" name="question3" value="d">D. Uranus</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>4. What causes a solar eclipse?</p>
+        <div class="options">
+            <label><input type="radio" name="question4" value="a">A. When the Earth passes between the Sun and the Moon</label>
+            <label><input type="radio" name="question4" value="b">B. When the Moon passes between the Earth and the Sun</label>
+            <label><input type="radio" name="question4" value="c">C. When the Moon's shadow falls on the Earth</label>
+            <label><input type="radio" name="question4" value="d">D. When the Sun's shadow falls on the Moon</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>5. How many moons does Mars have?</p>
+        <div class="options">
+            <label><input type="radio" name="question5" value="a">A. 0</label>
+            <label><input type="radio" name="question5" value="b">B. 1</label>
+            <label><input type="radio" name="question5" value="c">C. 2</label>
+            <label><input type="radio" name="question5" value="d">D. 3</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>6. What causes the seasons on Earth?</p>
+        <div class="options">
+            <label><input type="radio" name="question6" value="a">A. Changes in the Earth's distance from the Sun</label>
+            <label><input type="radio" name="question6" value="b">B. Tilt of the Earth's axis</label>
+            <label><input type="radio" name="question6" value="c">C. Earth's rotation speed</label>
+            <label><input type="radio" name="question6" value="d">D. Changes in the Sun's brightness</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>7. What causes the different phases of the Moon?</p>
+        <div class="options">
+            <label><input type="radio" name="question7" value="a">A. Earth's shadow</label>
+            <label><input type="radio" name="question7" value="b">B. Changes in the Moon's brightness</label>
+            <label><input type="radio" name="question7" value="c">C. Sunlight reflecting off the Moon</label>
+            <label><input type="radio" name="question7" value="d">D. The Moon's orbit around the Earth</label>
+        </div>
+    </div>
+    <div class="question">
+        <p>8. How long does it take for the Earth to complete one orbit around the Sun?</p>
+        <div class="options">
+            <label><input type="radio" name="question8" value="a">A. 24 hours</label>
+            <label><input type="radio" name="question8" value="b">B. 1 month</label>
+            <label><input type="radio" name="question8" value="c">C. 1 year</label>
+            <label><input type="radio" name="question8" value="d">D. 10 years</label>
+        </div>
+    </div>
+    <div class="question">
+        <p>9. Which planet has the most moons?</p>
+        <div class="options">
+            <label><input type="radio" name="question9" value="a">A. Earth</label>
+            <label><input type="radio" name="question9" value="b">B. Jupiter</label>
+            <label><input type="radio" name="question9" value="c">C. Saturn</label>
+            <label><input type="radio" name="question9" value="d">D. Mars</label>
+        </div>
+    </div>
+    <div class="question">
+        <p>10. What causes a lunar eclipse?</p>
+        <div class="options">
+            <label><input type="radio" name="question10" value="a">A. When the Earth passes between the Sun and the Moon</label>
+            <label><input type="radio" name="question10" value="b">B. When the Moon passes between the Earth and the Sun</label>
+            <label><input type="radio" name="question10" value="c">C. When the Moon's shadow falls on the Earth</label>
+            <label><input type="radio" name="question10" value="d">D. When the Sun's shadow falls on the Moon</label>
+        </div>
+    </div>
+
+
+
+    <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+    <div id="result"></div>
+</div>
+
+<script>
+function submitQuiz() {
+    var answers = [];
+    var questions = document.querySelectorAll('.question');
+    var allQuestionsAnswered = true; 
+
+    questions.forEach(function(question) {
+        var selectedOption = question.querySelector('input[type="radio"]:checked');
+        if (selectedOption) {
+            answers.push(selectedOption.value);
+        } else {
+            allQuestionsAnswered = false;
+        }
+    });
+
+    if (!allQuestionsAnswered) {
+        alert('Please answer all questions before submitting.');
+        return; 
+    }
+
+    displayResult(answers);
+}
+
+
+    function displayResult(answers) {
+        var correctAnswers = ['b', 'b', 'c', 'b', 'b', 'b', 'd', 'c', 'c', 'a'];
+        var score = 0;
+        for (var i = 0; i < answers.length; i++) {
+            if (answers[i] === correctAnswers[i]) {
+                score++;
+            }
+        }
+        
+        if (score >= 5) {
+            window.location.href = 'score_above_5.html?score=' + score;
+        } else {
+            window.location.href = 'score_below_5.html?score=' + score;
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+}
+
+* {
+    animation: 10s infinite linear;
+}
+
+.sky {
+    width: 100vw;
+    height: 100vh;
+    background-color: #87CEEB; 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+.sun, .earth {
+    position: absolute;
+    border-radius: 50%;
+    animation-timing-function: linear;
+}
+
+.sun {
+    width: 200px; 
+    height: 200px;
+    background-color: yellow; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.earth {
+    width: 100px; /* Adjust size of the Earth */
+    height: 100px;
+    background-color: green; /* Earth color */
+    animation-name: orbit-earth;
+}
+
+.moon {
+    width: 20px; /* Adjust size of the Moon */
+    height: 20px;
+    background-color: gray; /* Moon color */
+    animation-name: orbit-moon;
+}
+
+@keyframes orbit-earth {
+    from {
+        transform-origin: center;
+        transform: rotate(0deg) translateX(-250px) rotate(0deg); /* Distance from Sun */
+    }
+    to {
+        transform-origin: center;
+        transform: rotate(360deg) translateX(-250px) rotate(-360deg); /* Distance from Sun */
+    }
+}
+
+@keyframes orbit-moon {
+    from {
+        transform-origin: center;
+        transform: rotate(0deg) translateX(-150px) rotate(0deg); /* Distance from Earth */
+    }
+    to {
+        transform-origin: center;
+        transform: rotate(360deg) translateX(-150px) rotate(-360deg); /* Distance from Earth */
+    }
+}
+
+/* Solar Eclipse Animation */
+@keyframes solar-eclipse {
+    50% {
+        opacity: 1;
+    }
+    51% {
+        opacity: 0; /* Moon covers Sun */
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.sun,
+.earth {
+    animation-name: rotate-sun-earth;
+}
+
+@keyframes rotate-sun-earth {
+    from {
+        transform-origin: center;
+        transform: rotate(0deg);
+    }
+    to {
+        transform-origin: center;
+        transform: rotate(360deg);
+    }
+}
+
+.moon {
+    animation-name: rotate-moon;
+}
+
+@keyframes rotate-moon {
+    from {
+        transform-origin: center;
+        transform: rotate(0deg);
+    }
+    to {
+        transform-origin: center;
+        transform: rotate(360deg);
+    }
+}
+
+.moon.eclipse {
+    animation-name: solar-eclipse, rotate-moon;
+}

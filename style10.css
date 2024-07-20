@@ -1,0 +1,110 @@
+/*CSS for eclipe animation*/
+
+/*Styles that apply to the whole page in general
+=========================================================*/
+p {
+    color: white;
+    font-family: Open Sans Condensed, sans-serif;
+  }
+  
+  body {
+    background-image: url("../images/night-sky.jpg");
+    background-color: black;
+  }
+  
+  .center {
+    text-align: center;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /*The heading, i.e. the main message or title of the page
+  =========================================================*/
+  div.heading {
+    font-size: 4em;
+    font-weight: normal;
+    font-family: Open Sans Condensed, sans-serif;
+  }
+  
+  /*The moon and animation
+  =========================================================*/
+  div.moon {
+    position: relative;
+    height: 130px;
+    width: 130px;
+    background-image: url("../images/FullMoon.jpg");
+    background-size: cover;
+    background-color: grey;
+    border-radius: 50%;
+    margin-top: 55px;
+    z-index: 1000;
+  }
+  
+  div.shadow {
+    position: relative;
+    height: 130px;
+    width: 130px;
+    z-index: 9999;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: inset 6em 6em rgba(255,255,255, 0.5);
+    animation-name: eclipse;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes eclipse {
+    0% {
+      box-shadow: inset 6em 6em rgba(255,255,255, 0.5);
+    }
+  
+    50% {
+      box-shadow: inset 0em 0em rgba(255,255,255, 0.5);
+    }
+  
+    100% {
+      box-shadow: inset -6em -6em rgba(255,255,255, 0.5);
+    }
+  }
+  
+  @keyframes darken {
+      0% {opacity: 0;}
+      50% {opacity: 1;}
+      100% {opacity: 0;}
+  }
+  
+  div.darken {
+    opacity: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: black;
+    animation-name: darken;
+    animation-duration: 20s;
+  }
+  
+  /*Information on next eclipse
+  ========================================================*/
+  div.info p {
+    font-size: 1.5em;
+  }
+  
+  /*Footer
+  =========================================================*/
+  footer.credits {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+  }
+  
+  footer p {
+    font-size: 0.7em;
+    padding-left: 15px;
+    line-height: 10px;
+  }

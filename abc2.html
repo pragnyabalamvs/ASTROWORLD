@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  
+    <title>Solar Eclipse Events</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .light {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .dark {
+            background-color: #222;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .glow {
+            animation: glow-animation 2s infinite alternate;
+        }
+
+        @keyframes glow-animation {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            }
+            100% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+            }
+        }
+
+        .custom-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .custom-list li {
+            position: relative;
+            padding-left: 20px;
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .custom-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #ff0;
+            font-size: 24px;
+        }
+
+        .event-info {
+            margin-left: 40px;
+            font-style: italic;
+            color: #ccc;
+        }
+        .o {
+  position: relative;
+  left: -300px;
+  background-color: green;
+  top: -284px;
+  height: 50px;
+}
+.z {
+  position: relative;
+  left: 1063px;
+  background-color: green;
+  top: -284px;
+  height: 40px;
+  width: 30px;
+  z-index: 10;
+}
+    </style>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+      
+        function goToHomePage() {
+            window.location.href = 'homepage.html';
+        }
+      
+        
+      </script>
+</head>
+<body>
+    <header>
+        <button class="z" onclick="goBack()"><</button>
+        <button class="o" onclick="goToHomePage()">Go to starting page</button>
+    </header>
+    <div id="output"></div>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+   
+    <script type="text/babel">
+        const ThemeContext = React.createContext('light');
+
+        const ThemeProvider = ({ children }) => {
+            const [theme, setTheme] = React.useState('light');
+
+            const toggleTheme = () => {
+                setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
+            };
+
+            return (
+                <ThemeContext.Provider value={{ theme, toggleTheme }}>
+                    {children}
+                </ThemeContext.Provider>
+            );
+        };
+
+        const SolarEclipseList = () => {
+            const [loading, setLoading] = React.useState(true);
+            const [error, setError] = React.useState(null);
+            const [indianEvents, setIndianEvents] = React.useState([]);
+            const [currentTime, setCurrentTime] = React.useState(new Date());
+
+            const themeContext = React.useContext(ThemeContext);
+
+            React.useEffect(() => {
+                const fetchIndianEvents = async () => {
+                    try {
+                        const events = [
+                            { year: 1984, name: "Rakesh Sharma's Space Mission", country: "India", time: "10:00 AM" },
+                            { year: 2008, name: "Chandrayaan-1 Lunar Mission", country: "India", time: "12:30 PM" },
+                            { year: 2013, name: "Mars Orbiter Mission (Mangalyaan)", country: "India", time: "9:15 AM" },
+                            { year: 2023, name: "Indian Solar Observatory Discoveries", country: "India", time: "11:45 AM" },
+                        ];
+                        await new Promise(resolve => setTimeout(resolve, 1500));
+                        setIndianEvents(events);
+                        setLoading(false);
+                    } catch (error) {
+                        setError(error);
+                        setLoading(false);
+                    }
+                };
+
+                fetchIndianEvents();
+
+                return () => {
+                    console.log("Component unmounted. Clean up here...");
+                };
+            }, []);
+
+            React.useEffect(() => {
+                const intervalId = setInterval(() => {
+                    setCurrentTime(new Date());
+                }, 60000);
+
+                return () => {
+                    clearInterval(intervalId);
+                };
+            }, []);
+
+            if (loading) {
+                return <div>Loading...</div>;
+            }
+
+            if (error) {
+                return <div>Error: {error.message}</div>;
+            }
+
+            const generateEvents = () => {
+                return indianEvents.map(event => (
+                    <li key={event.year}>
+                        <span>{event.year}</span>
+                        <span className="event-info"> - {event.name}: Details about the event in {event.country}, at {event.time} (local time).</span>
+                    </li>
+                ));
+            };
+
+            return (
+                <div className={`container ${themeContext.theme}`}>
+                    <h1 className="glow">Glory of India in Solar System Exploration</h1>
+                    <p>Current Time: {currentTime.toLocaleTimeString()}</p>
+                    <button onClick={themeContext.toggleTheme}>Toggle Theme</button>
+                    <ul className="custom-list">
+                        {generateEvents()}
+                    </ul>
+                </div>
+            );
+        };
+
+        ReactDOM.render(
+            <ThemeProvider>
+                <SolarEclipseList />
+            </ThemeProvider>,
+            document.getElementById('output')
+        );
+    </script>
+</body>
+</html>

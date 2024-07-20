@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> SOLAR SYSTEM</title>
+       
+        <link rel="icon" type="image/x-icon" href="logo.png">
+        <link rel="stylesheet" href="solar.css"/>
+        <script>
+            function s(){
+                document.location.href='planet.html';
+            }
+        </script>
+        <style>
+            .o {
+  position: relative;
+  left: -38px;
+  background-color: green;
+  top: 0px;
+  height: 53px;
+}
+.z {
+  position: relative;
+  left: 0px;
+  background-color: green;
+  top: 331px;
+  height: 40px;
+  width: 30px;
+  z-index: 10;
+}
+            button {
+  position: absolute;
+  left: 651px;
+  right: 273px;
+  top: 750px;
+  bottom: 32px;
+  color: white;
+  background-color: green;
+  height: 50px;
+}
+
+        </style>
+            <script>
+                 
+        function goBack() {
+            window.history.back();
+        }
+
+        function goToHomePage() {
+            window.location.href = 'homepage.html';
+        }
+
+        function goToPlanetPage() {
+            window.location.href = 'planet.html';
+        }
+    
+                   
+            </script>
+    </head>
+    
+    <body background="http://www.pptbackgrounds.net/uploads/the-starry-sky-backgrounds-wallpapers.jpg">
+        <button class="z" onclick="goBack()"><</button>
+            <button  class="o" onclick="goToHomePage()">Go to starting page</button>
+
+
+        <img class ="body" id="sun" src="http://2.bp.blogspot.com/_FBjLq3xECA0/TFzcxhIZUoI/AAAAAAAAAHU/U8CGkSJJoGo/s1600/Sun_Renderd_ps.jpg">
+        
+        <div class ="body" id="mercury-orbit">
+            <img class ="body" id="mercury" src="http://www.wwu.edu/skywise/planets/mercury.jpg">
+        </div>
+        
+        <div class ="body" id="venus-orbit">
+            <img class ="body" id="venus" src="http://photojournal.jpl.nasa.gov/jpegMod/PIA00104_modest.jpg">
+        </div>
+        
+        <div class ="body" id="earth-orbit">        
+            <img class ="body" id="earth" src="http://eoimages.gsfc.nasa.gov/images/imagerecords/57000/57723/globe_east_540.jpg">
+        
+            <div class ="body" id="moon-orbit">
+                <img class ="body" id="moon" src="http://apod.nasa.gov/apod/image/1103/lroc_wac_nearside.jpg">
+            </div>
+        </div>
+        
+         <div class ="body" id="mars-orbit">
+            <img class ="body" id="mars" src="http://vedicartandscience.com/wp-content/uploads/2011/08/mars-planet1.jpg">
+        </div>
+        
+        <div class ="body" id="jupiter-orbit">
+            <img class ="body" id="jupiter" src="http://upload.wikimedia.org/wikipedia/commons/e/e1/Jupiter_(transparent).png">
+        </div>
+        
+        <div class ="body" id="saturn-orbit">
+            <img class ="body" id="saturn" src="http://vector-magz.com/wp-content/uploads/2013/09/saturn-clip-art1.png">
+        </div>
+        
+        <div class ="body" id="uranus-orbit">
+            <img class ="body" id="uranus" src="http://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg">
+        </div>
+        
+        <div class ="body" id="neptune-orbit">
+            <img class ="body" id="neptune" src="http://t-bag.org/Painting/TheMax/neptune.gif">
+        </div>
+    <div class="button1">
+        <button type="button" onclick="s()">CLICK TO KNOW MORE ABOUT PLANETS</button>
+    </div>
+    </body>
+</html>

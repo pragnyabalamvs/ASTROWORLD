@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Homepage</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="style4.css">
+    <script>
+        function redirectToAnotherPage() {
+          
+          document.location.href = 'https://spaceplace.nasa.gov/all-about-the-sun/en/';
+        }
+        function r(){
+            document.location.href ='https://spaceplace.nasa.gov/all-about-the-moon/en/';
+
+        }
+        function a(){
+            document.location.href ='https://www.travelandleisure.com/total-solar-eclipse-2024-7499583';
+
+        }
+        function s(){
+            document.location.href ='https://www.skyatnightmagazine.com/advice/skills/stargazing-for-kids';
+        }
+      </script>
+</head>
+<body>
+    
+   
+    <header>
+           
+           
+            <img src="logo.png" style="width: 100px; height: 100px; ">
+        <nav>
+            <a href="explore.html">Home</a>
+            <a href="contact.html">Contact</a>
+            <a href="About.html">About</a>
+            <a href="abc.html">Future info</a>
+            <a href="abc1.html">Share form</a>
+            <a href="abc2.html">Indian achievements</a>
+            <a href="feedback1.html">Feedback</a>
+            <a href="quiz.html">Quiz</a>
+        </nav>
+    </header>
+
+
+    <div class="carousel">
+     
+        <div class="list">
+            
+            <div class="item">
+                <img src="image/image2.jpg">
+                <div class="content">
+                    <div class="author">SELENE</div>
+                    <div class="title">THE MOON</div>
+                    <div class="topic">CHANDRA</div>
+                    <div class="des">
+                        From lighting up our skies to maintaining a geological record of our solar system's history, Earth's closest celestial neighbor plays a pivotal role in the studies of our planet and our solar system.
+                        The Moon's gravitational pull causes ocean tides on Earth, known as tidal forces.The Moon's gravity is about one-sixth that of Earth's.The Moon exhibits different phases as it orbits Earth, caused by the changing angles of sunlight illuminating its surface.
+                    </div>
+                    <div class="buttons">
+                       
+                        <button onclick="r()">SEE MORE</button>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="image/ima3.jpg">
+                <div class="content">
+                    <div class="author">PATH</div>
+                    <div class="title">2024 TOTAL ECLIPSE</div>
+                    <div class="topic">WHEN AND WHERE</div>
+                    <div class="des">
+                        On April 8, 2024, a total solar eclipse will cross North America, passing over Mexico, United States, and Canada.The duration of totality will vary depending on the location along the path. In some areas, totality may last for over four minutes.Visibility of the eclipse will depend on weather conditions in your location.
+                    </div>
+                    <div class="buttons">
+                        <button onclick="a()">SEE MORE</button>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img  src="image/p.jpg">
+                <div class="content">
+                    <div class="author">SOL</div>
+                    <div class="title">THE SUN</div>
+                    <div class="topic">HELIOS</div>
+                    <div class="des">
+                     
+                        The Sun is the star at the heart of our solar system. Its gravity holds the solar system together, keeping everything - from the biggest planets to the smallest bits of debris - in its orbit.It is composed mainly of hydrogen(about 74%).The sun's energy is produced through nuclear fusion.
+                    </div>
+                    <div class="buttons">
+                        <button onclick="redirectToAnotherPage()">SEE MORE</button>
+                        </div>
+
+
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="image/s1.jpg">
+                <div class="content">
+                    <div class="author">ASTRAL</div>
+                    <div class="title">SKYWATCHING</div>
+                    <div class="topic">STARGAZING</div>
+                    <div class="des">
+                        It refers to the act of observing celestial phenomena, such as stars, planets, the Moon, meteors, and other celestial objects, typically done with the naked eye, binoculars or telescopes. Skywatching allows us to connect with the vastness of the cosmos, reminding us of our place in the universe.It is a popular hobby enjoyed by people of all ages and backgrounds who have an interest in astronomy and the natural world.
+                    <div class="buttons">
+                        <button onclick="s()">SEE MORE</button>
+                    </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="thumbnail">
+            
+            <div class="item">
+                <img src="image/image2.jpg">
+                <div class="content">
+                    <div class="title">
+                       THE MOON
+                    </div>
+                    <div class="description">
+                        SELENE
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/ima3.jpg">
+                <div class="content">
+                    <div class="title">
+                        2024 SOLAR ECLIPSE
+                    </div>
+                    <div class="description">
+                        PATH
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/p.jpg">
+                <div class="content">
+                    <div class="title">
+                        THE SUN
+                    </div>
+                    <div class="description">
+                        SOL
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="image/s1.jpg">
+                <div class="content">
+                    <div class="title">
+                       STARGAZING
+                    </div>
+                    <div class="description">
+                        ASTRAL
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+
+        <div class="arrows">
+            <button id="prev"></button>
+            <button id="next"></button>
+        </div>
+      
+        <div class="time"></div>
+    </div>
+
+    <script src="a.js"></script>
+</body>
+</html>

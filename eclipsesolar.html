@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Solar Eclipse</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="style9.css">
+    <style>
+        h1 {
+            text-align: center;
+            color: #fff; 
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFD700, 0 0 70px #FFD700, 0 0 80px #FFD700, 0 0 100px #FFD700, 0 0 150px #FFD700; 
+        }
+        body {
+            background-color: #000; 
+            color: #fff; 
+        }
+        .sky
+        {
+            margin-top:-15px;
+        }
+        .z {
+  position: relative;
+  left: 0px;
+  background-color: green;
+  top: 394px;
+  height: 40px;
+  width: 30px;
+  z-index: 10;
+}
+.o {
+  position: relative;
+  left: -32px;
+  background-color: green;
+  top: 12px;
+  height: 50px;
+}
+
+       
+    </style>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+      
+        function goToHomePage() {
+            window.location.href = 'homepage.html';
+        }
+      
+        
+      </script>
+</head>
+<body>
+   <button class="z" onclick="goBack()"><</button>
+    <button  class="o" onclick="goToHomePage()">Go to starting page</button>
+
+
+
+    <h1>IN THE SHADOW OF MOON: EXPLORING SOLAR ECLIPSE</h1>
+    <div class="t">
+        <p>A solar eclipse occurs when the Moon passes between the Earth and the Sun, obscuring all or part of the Sun's light. This celestial event happens only during a new moon, when the Sun and Moon are in perfect alignment as seen from Earth</p>
+        <p>There are three main types of solar eclipses: total, partial, and annular. During a total solar eclipse, the Sun is completely covered by the Moon, revealing the Sun's corona. Partial solar eclipses occur when only a portion of the Sun is obscured, while annular eclipses happen when the Moon is farther from Earth, appearing smaller and not completely covering the Sun, resulting in a ring of sunlight around the darkened Moon. Solar eclipses offer unique opportunities for scientific observation and awe-inspiring experiences for observers around the world.On average, there are between 2 to 5 solar eclipses in a year. The frequency of solar eclipses can vary due to factors such as the tilt of the Earth's axis and the eccentricity of the Moon's orbit around the Earth.</p>
+    </div>
+
+
+<div class="sky">
+        <div class="sun"></div>
+        <div class="moon"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+}
+*{
+    animation:10s linear infinite;
+}
+.sky,.first{
+    width: 100vw;
+    height: 100vh;
+    background: -webkit-linear-gradient(right top, #0b8ddd, #128ae8, rgb(82,194,239), whitesmoke);
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: animate-sky;
+    position: relative;
+    overflow: hidden;
+    animation-duration: 20s;
+}
+.sun,
+.moon{
+    position: absolute;
+    width: 50vmin;
+    height: 50vmin;
+    border-radius: 50%;
+}
+.sun{
+    background: linear-gradient(gold,#e27618,#df6d0a,gold);
+    animation-name: animate-sun;
+    animation-duration: 20s;
+}
+.moon{
+    background: linear-gradient(rgb(72,70,70),rgb(45,42,42),black,white);
+    animation-name: animate-moon;
+    animation-duration: 20s;
+}
+@keyframes animate-sky{
+    50%{
+        background: black;
+    }
+}
+@keyframes animate-first{
+    50%{
+        background: black;
+    }
+}
+@keyframes animate-sun{
+    50%{
+        box-shadow: 0 0 5em 1em rgb(255, 85, 0);
+    }
+}
+@keyframes animate-moon{
+    from{
+        transform: translateX(-110vmin);
+    }
+    50%{
+        background: linear-gradient(rgb(72,70,70),rgb(45,42,42),black,rgb(136,136,136));
+        box-shadow: 0 10px 10px rgb(182,182,182);
+    }
+    to{
+        transform: translateX(120vmin) rotate(360deg);
+    }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Planets</title>
+    
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="style8.css">
+    <style>
+      .o {
+  position: relative;
+  left: -29px;
+  background-color: green;
+  top: -255px;
+  height: 50px;
+}
+.z {
+  position: relative;
+
+  left: 10px;
+
+  background-color: green;
+
+  top: 53px;
+
+  height: 40px;
+
+  width: 30px;
+
+  z-index: 10;
+
+}
+       img {
+  display: block;
+  margin: auto;
+    margin-top: auto;
+  margin-top: -19px;
+  width: 80px;
+  height: 80px;
+}
+h1 {
+  text-align: center;
+  margin-top: 5px;
+}p{
+    text-align:center;
+}
+h3{
+    text-align:center;
+}
+    </style>
+    <script>
+      function goBack() {
+          window.history.back();
+      }
+    
+      function goToHomePage() {
+          window.location.href = 'homepage.html';
+      }
+    
+      
+    </script>
+</head>
+<body>
+  <button class="z" onclick="goBack()"><</button>
+            <button  class="o" onclick="goToHomePage()">Go to starting page</button>
+
+
+        <div class="slider">
+            <div class="item">
+                <h1>MERCURY</h1>
+                <img src="merc.jpg"  >
+              <p> Mercury, closest to the Sun, features a heavily cratered surface. It experiences extreme temperature fluctuations due to its lack of atmosphere. A day on Mercury is longer than its year due to its slow rotation.</p> 
+              <h3>NO. OF MOONS: 0 </h3>
+            </div>
+            <div class="item">
+                <h1>VENUS</h1>
+                <img src="ven.jpg"  >
+              <p> Venus, Earth's "sister planet," is shrouded in a thick atmosphere, trapping heat. Surface temperatures are hot enough to melt lead. It rotates in the opposite direction to most planets.</p> 
+              <h3>NO. OF MOONS: 0</h3>
+            </div>
+            <div class="item">
+                <h1>EARTH</h1>
+                <img src="e.jpg"  >
+              <p>Earth is the only known planet to support life. Its atmosphere, rich in oxygen and nitrogen, is conducive to life. Magnetic field shields Earth from harmful solar radiation. </p> 
+              <h3>NO. OF MOONS: 1</h3>
+            </div>
+            <div class="item ">
+                <h1>MARS</h1>
+                <img src="mars.jpg"  >
+                <p>Mars is known as the "Red Planet" . Olympus Mons and Valles Marineris are notable landmarks. Mars once had liquid water, sparking interest in its potential habitability.</p> 
+              <h3>NO. OF MOONS: 2</h3>
+            </div>
+            <div class="item ">
+                <h1>JUPITER</h1>
+                <img src="j.jpg"  >
+                <p>Jupiter, the largest planet, has a predominantly hydrogen and helium atmosphere. Its Great Red Spot is a massive storm larger than Earth. It has an extensive moon system.</p> 
+              <h3>NO. OF MOONS: 95</h3>
+            </div>
+            <div class="item ">
+                <h1>SATURN</h1>
+                <img src="sat.jpg"  >
+                <p>Saturn's magnificent ring system is composed of ice particles and dust. Titan, its largest moon, has dense atmosphere. Saturn shows hexagonal-shaped storm at its north pole .</p> 
+              <h3>NO. OF MOONS: 146</h3>
+            </div>
+            <div class="item ">
+                <h1>URANUS</h1>
+                <img src="uranusp.jpg"  >
+                <p>Uranus, an ice giant, exhibits unique axial tilt resulting in extreme seasons. Its moon system, named after literary characters, adds to its intrigue. It was discovered in 1781.</p> 
+                <h3>NO. OF MOONS: 28</h3>
+            </div>
+            <div class="item ">
+                <h1>NEPTUNE</h1>
+                <img src="plut.jpg"  >
+                <p>Neptune, farthest from the Sun, boasts a vibrant blue hue due to methane in its atmosphere. It experiences supersonic winds and hosts a diverse moon system. Neptune's faint rings offer scientific opportunities.</p> 
+                <h3>NO. OF MOONS: 16</h3>
+            </div>
+            <div class="item ">
+                <h1>DWARF PLANET</h1>
+                <img src="nep.jpg"  >
+
+                <p>According to  astronomical classification, Pluto is not considered a planet.It is in the Kuiper Belt. It has icy landscapes and shares a binary system with Charon.</p> 
+                <h3>NO. OF MOONS: 5</h3>
+            </div>
+            <button id="next">></button>
+            <button id="prev"> <</button>
+        </div>
+        
+        <script src="p.js"></script>
+    </body>
+</html>

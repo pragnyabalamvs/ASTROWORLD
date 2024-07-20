@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safety Guidelines</title>
+  
+  
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #2c3e50; 
+      margin: 0;
+      padding: 0;
+      color: #ffffff; 
+    }
+
+    section {
+      background-color: #34495e;
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #2c3e50; 
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(52, 73, 94, 0.5); 
+      animation: glow-border 2s infinite alternate;
+    }
+
+    @keyframes glow-border {
+      0% {
+        box-shadow: 0 0 20px rgba(52, 73, 94, 0.5); 
+      }
+      50% {
+        box-shadow: 0 0 40px rgba(52, 73, 94, 0.5); 
+      }
+      100% {
+        box-shadow: 0 0 20px rgba(52, 73, 94, 0.5); 
+      }
+    }
+
+    h2 {
+      color: #f39c12; 
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .safety-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px rgba(52, 73, 94, 0.2); 
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease; 
+    }
+
+    .safety-image:hover {
+      transform: scale(1.1); 
+    }
+  </style>
+  <script>
+    function goBack() {
+        window.history.back();
+    }
+  
+    function goToHomePage() {
+        window.location.href = 'homepage.html';
+    }
+  
+    
+  </script>
+</head>
+<body>
+  <header>
+    <button class="z" onclick="goBack()"><</button>
+                        <button  class="o" onclick="goToHomePage()">Go to starting page</button>
+            
+  </header>
+  <section id="eye-safety">
+    <h2>Eye Safety for Total Solar Eclipses</h2>
+    <img class="safety-image" src="safe.jpg" alt="Eye Safety">
+    <p>Here are some important safety guidelines to follow during a total solar eclipse:</p>
+    <ul>
+      <li>View the Sun through eclipse glasses or a handheld solar viewer during the partial eclipse phases before and after totality.</li>
+      <li>You can view the eclipse directly without proper eye protection only when the Moon completely obscures the Sun’s bright face – during the brief and spectacular period known as totality. (You’ll know it’s safe when you can no longer see any part of the Sun through eclipse glasses or a solar viewer.)</li>
+      <li>As soon as you see even a little bit of the bright Sun reappear after totality, immediately put your eclipse glasses back on or use a handheld solar viewer to look at the Sun.</li>
+    </ul>
+  </section>
+
+  <section id="skin-safety">
+    <h2>Skin Safety</h2>
+    <img class="safety-image" src="skin.jpeg" alt="Skin Safety">
+    <p>Even during a partial or annular eclipse, or during the partial phases of a total eclipse, the Sun will still be very bright. If you are watching an entire eclipse, you may be in direct sunlight for hours. Remember to wear sunscreen, a hat, and protective clothing to prevent skin damage.</p>
+  </section>
+  <section id="video-section">
+    <h2>Watch the Video</h2>
+    
+    <video style="margin:auto;" width="560" height="315" controls>
+      <source src="isro_curtain_raiser_video2.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+</body>
+</html>
